@@ -7,7 +7,7 @@ conf = SparkConf().setMaster("local").setAppName("RatingsHistogram")
 sc = SparkContext(conf = conf)
 
 # Load the Data
-lines = sc.textFile("file:///mnt/c/Users/jeffr/Udemy_Spark/ml-100k/u.data")
+lines = sc.textFile("file:///mnt/c/Users/jeffr/Udemy_Spark/DS01_MovieLensRating/ml-100k/u.data")
 # Extract(map) the data we care about
 ratings = lines.map(lambda x: x.split()[2])
 # Perform an Action: Count by Value
